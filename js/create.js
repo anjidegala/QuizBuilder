@@ -1,0 +1,1 @@
+let img="";function readImg(e){let r=new FileReader();r.onload=()=>{img=r.result;preview.src=img};r.readAsDataURL(e.target.files[0])}function saveCourse(){localStorage.setItem("customCourse",JSON.stringify({title:title.value,desc:desc.value,cat:cat.value,level:level.value,img}));alert("Course saved successfully!");location.href="admin-dashboard.html"}

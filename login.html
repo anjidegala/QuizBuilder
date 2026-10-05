@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login | QuizMaster Pro</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <b class="logo">✦ QuizMaster <i>Pro</i></b>
+  <div><a href="index.html">← Home</a><a href="signup.html">Create Account</a></div>
+</nav>
+<main class="login">
+  <div class="loginbox">
+    <div class="big">🔐</div>
+    <span>SECURE LOGIN</span>
+    <h1>Welcome back</h1>
+    <p>Select your module to continue.</p>
+    <div class="tabs">
+      <button type="button" id="ut" class="on">👤 User</button>
+      <a class="module-tab" href="admin-login.html">🛡️ Admin</a>
+    </div>
+    <form onsubmit="login(event)">
+      <label>Username<input id="u" required placeholder="Enter username"></label>
+      <label>Password<input id="p" type="password" required placeholder="Enter password"></label>
+      <button class="btn full">Login →</button>
+      <div id="err"></div>
+    </form>
+    <div class="demo" id="demo">Demo User: <b>student</b> / <b>1234</b></div>
+    <p class="login-signup">New student? <a href="signup.html"><b>Create an account</b></a></p>
+  </div>
+  <div class="loginart">🎓<h2>Learn. Create. Compete.</h2><p>Students learn. Admins manage. Everyone progresses.</p></div>
+</main>
+<script src="js/auth.js"></script>
+</body>
+</html>

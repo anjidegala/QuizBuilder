@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Login | QuizMaster Pro</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+ <b class="logo">✦ QuizMaster <i>Pro</i></b>
+ <div><a href="index.html">← Home</a><a href="login.html">User Login</a></div>
+</nav>
+<main class="login">
+ <div class="loginbox">
+  <div class="big">🛡️</div>
+  <span>ADMIN MODULE</span>
+  <h1>Administrator Login</h1>
+  <p>Sign in to manage courses, quizzes and platform content.</p>
+  <form id="adminForm">
+   <label>Admin Username
+    <input id="adminUser" required autocomplete="username" placeholder="Enter admin username">
+   </label>
+   <label>Admin Password
+    <input id="adminPass" type="password" required autocomplete="current-password" placeholder="Enter admin password">
+   </label>
+   <button type="submit" class="btn full">Login to Admin →</button>
+   <div id="adminErr"></div>
+  </form>
+  <div class="demo">Demo Admin: <b>admin</b> / <b>admin123</b></div>
+ </div>
+ <div class="loginart">🛡️<h2>Admin Control Center</h2><p>Manage courses, quizzes, questions and learning content.</p></div>
+</main>
+<script>
+document.getElementById("adminForm").addEventListener("submit", function(e){
+ e.preventDefault();
+ const u=document.getElementById("adminUser").value.trim();
+ const p=document.getElementById("adminPass").value;
+ const err=document.getElementById("adminErr");
+ if(u==="admin" && p==="admin123"){
+   localStorage.setItem("logged","yes");
+   localStorage.setItem("role","admin");
+   localStorage.setItem("currentUser","admin");
+   window.location.href="admin-dashboard.html";
+ }else{
+   err.textContent="Invalid admin username or password.";
+ }
+});
+</script>
+</body>
+</html>
